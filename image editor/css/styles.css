@@ -1,0 +1,176 @@
+body {
+    background: var(--backgroundColor);
+}
+* {
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+:root {
+    --radius:8px;
+    --primaryColor:#242F9B;
+    --secondaryColor:#646FD4;
+    --assistantColor1: #9BA3EB;
+    --assistantColor2: #DBDFFD;
+    --backgroundColor: linear-gradient(to right, #B06AB3, #4568DC);
+    --radius: 8px;
+    --text-margin:10px 5px;
+    --text-size1:14px;
+    --text-size2: 12px
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color:var(--primaryColor);
+    margin:0;
+}
+h6 {
+    font-size: var(--text-size1);
+}
+.btn {
+    font-size:var(--text-size2);
+    margin:0 5px 5px 0; 
+    border:1px solid var(--secondaryColor);
+    color:var(--secondaryColor);
+    text-transform: capitalize;
+    padding:3px;
+    font-size: 12px;
+}
+.btn:hover {
+    background:var(--secondaryColor);
+    color:#fff;
+}
+.disable :where(.filters, .directions, .bars,.reset, .save) {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+
+.editor-container {
+    width:100%;
+    height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.editor {
+    min-height: 350px;
+    width:60%;
+    background:var(--assistantColor2);
+    border-radius: 8px;
+}
+.workspace {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.workspace .left {
+    display: flex;
+    flex-direction: column;
+    width:45%;
+    border:1px solid var(--assistantColor1);
+    border-radius: var(--radius);
+}
+
+.workspace .left .filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.workspace .left .filters .title {
+    margin:var(--text-margin)
+}
+.workspace .left .filters button {
+    width:45%;
+}
+.workspace .left .filters button.active {
+    background-color:var(--secondaryColor);
+    color:#fff;
+}
+
+.workspace .left .bars {
+    display:flex;
+    flex-wrap: wrap;
+}
+.workspace .left .bars span {
+    display: flex;
+    width: 100%;
+}
+.workspace .left .bars span .effect {
+    display: flex;
+    width:50%;
+}
+.workspace .left .bars span .effect .title {
+    margin:var(--text-margin)
+}
+.workspace .left .bars span .percent {
+    width:50%;
+    display: flex;
+    justify-content: flex-end;
+}
+.workspace .left .bars span .percent p {
+    color:var(--primaryColor);
+    margin: var(--text-margin);
+    font-size: 12px;
+}
+.workspace .left .bars .range {
+    width:100%;
+}
+.workspace .left .bars .range input[type='range'] {
+    width:100%;
+    height: 4px;
+    padding:0
+}
+
+.workspace .left .directions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.workspace .left .directions .title {
+    margin:var(--text-margin);
+}
+.workspace .left .directions button {
+    width:30px;
+    padding:0;
+}
+.workspace .left .directions button img {
+    width:32px;
+    height: 32px;
+    color:#242F9B
+}
+
+
+.workspace .right {
+    display: flex;
+    width:50%;
+}
+.workspace .right .img-holder {
+    display: flex;
+    height: 100%;
+}
+.workspace .right .img-holder img {
+    height:300px;
+    width:100%;
+    object-fit: cover;
+    margin-top:16px;
+    border-radius: 8px;
+}
+
+.file {
+    display: flex;
+    margin:10px 0 0 0;
+}
+.file .reset {
+    width:50%;
+}
+.file .load {
+    width:50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#vertical svg {
+    transform: rotate(90deg);
+}
+
+
